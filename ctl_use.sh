@@ -10,13 +10,13 @@ DEBUG=0
 ADD=0
 DEL=0
 
-for I in 'seq 1 $#'; do
+for I in `seq 1 $#`; do
 case $1 in
 -v|--verbose)
 	DEBUG=1
 	shift ;;
 -h|--help)
-	echo "Usage: 'basename $0' --add USER_LIST --del USER_LIST -v|--verbose -h|--help"
+	echo "Usage: `basename $0` --add USER_LIST --del USER_LIST -v|--verbose -h|--help"
 exit 0
 ;;
 --add)
@@ -33,7 +33,7 @@ esac
 done
 
 if [ $ADD -eq 1 ]; then
-	for USER in 'echo $ADDUSERS | sed 'S@,@ @G''; do
+	for USER in `echo $ADDUSERS | sed 'S@,@ @G'`; do
 		if id $USER &> /dev/null; then
 			[ $DEBUG -eq 1 ] && echo "$USER exists."
 		else
@@ -44,7 +44,7 @@ if [ $ADD -eq 1 ]; then
 fi
 
 if [ $DEL -eq 1 ]; then
-	for USER in 'echo $ADDUSERS | sed 'S@,@ @G''; do
+	for USER in `:echo $ADDUSERS | sed 'S@,@ @G'`; do
 		if id $USER &> /dev/null; then
 			[ $DEBUG -eq 1 ] && echo "Delete $USER finished."
 		else
