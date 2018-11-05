@@ -19,3 +19,5 @@ done
 
 echo "ODD sum is: $ODDSUM."
 echo "EVEN sum is: $EVENSUM."
+
+#end
