@@ -26,6 +26,4 @@ xz)
 	exit 9
 	;;
 esac
-git fetch
-rtal_test
-portal_test
+shannon_test
