@@ -26,3 +26,5 @@ xz)
 	exit 9
 	;;
 esac
+
+portal_test
