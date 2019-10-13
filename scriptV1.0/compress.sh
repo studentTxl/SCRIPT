@@ -27,4 +27,4 @@ xz)
 	;;
 esac
 
-portal_test
+shannon_test
