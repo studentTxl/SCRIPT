@@ -51,5 +51,5 @@ if [ $DEL -eq 1 ]; then
 			[ $DEBUG -eq 1 ] && echo "$USER not exist."
 		fi
 	done
-fi
+fi test
 
